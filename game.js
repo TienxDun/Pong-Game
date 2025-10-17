@@ -8,7 +8,6 @@ const PADDLE_HEIGHT = 100;
 const BALL_SIZE = 10;
 const PADDLE_SPEED = 8;
 const COMPUTER_SPEED = 6;
-const WINNING_SCORE = 10;
 
 // Game state
 let playerScore = 0;
@@ -36,8 +35,7 @@ const ball = {
     y: canvas.height / 2,
     size: BALL_SIZE,
     dx: 4,
-    dy: 4,
-    speed: 4
+    dy: 4
 };
 
 // Key state tracking
@@ -82,14 +80,6 @@ function drawCircle(x, y, size, color) {
     ctx.beginPath();
     ctx.arc(x, y, size, 0, Math.PI * 2);
     ctx.fill();
-}
-
-// Draw text function
-function drawText(text, x, y, color, font = '20px Arial') {
-    ctx.fillStyle = color;
-    ctx.font = font;
-    ctx.textAlign = 'center';
-    ctx.fillText(text, x, y);
 }
 
 // Draw center line
@@ -230,8 +220,9 @@ function resetBall() {
     ball.y = canvas.height / 2;
     
     // Random direction
-    ball.dx = (Math.random() > 0.5 ? 1 : -1) * ball.speed;
-    ball.dy = (Math.random() * 2 - 1) * ball.speed;
+    const speed = 4;
+    ball.dx = (Math.random() > 0.5 ? 1 : -1) * speed;
+    ball.dy = (Math.random() * 2 - 1) * speed;
 }
 
 // Update scoreboard
