@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pong Game</title>
+    <link rel="icon" href="data:," />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,9 +20,41 @@
                 <span id="computerScore">0</span>
             </div>
         </div>
+        <div id="menu" class="menu">
+            <h2>Select Game Mode</h2>
+            <div class="menu-options">
+                <button id="singleBtn">Single Player</button>
+                <button id="multiBtn">Multiplayer</button>
+                <button id="timedBtn">Timed Mode</button>
+            </div>
+            <div class="ai-options">
+                <h3>AI Level (Single Player)</h3>
+                <button id="easyBtn">Easy</button>
+                <button id="mediumBtn">Medium</button>
+                <button id="hardBtn">Hard</button>
+            </div>
+            <div class="custom-options">
+                <h3>Customization</h3>
+                <div>
+                    <label>Speed: <span id="speedValue">1.0</span>x</label>
+                    <input type="range" id="speedSlider" min="0.5" max="2" step="0.1" value="1">
+                </div>
+                <div>
+                    <label>Paddle Color:</label>
+                    <input type="color" id="paddleColorPicker" value="#ffffff">
+                </div>
+                <div>
+                    <label>Ball Color:</label>
+                    <input type="color" id="ballColorPicker" value="#ffffff">
+                </div>
+                <button id="resetBtn">Reset Settings</button>
+            </div>
+            <button id="startBtn">Start Game</button>
+        </div>
         <canvas id="pongCanvas" width="800" height="600"></canvas>
         <div class="controls">
-            <p>Controls: Use mouse to move paddle up/down</p>
+            <p>Player 1: Mouse/Arrow | Player 2: W/S | Space: Pause</p>
+            <p>Keyboard: 1/2/3 Mode | E/M/H AI | Q/W Speed | A/S/D/F Colors | R Reset</p>
         </div>
     </div>
     <script src="game.js"></script>

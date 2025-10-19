@@ -51,6 +51,56 @@ h1 {
     cursor: none;
 }
 
+.menu {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.menu h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.menu-options, .ai-options, .custom-options {
+    margin-bottom: 20px;
+}
+
+.menu button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.menu button:hover {
+    background: #45a049;
+}
+
+.menu button.active {
+    background: #2196F3;
+}
+
+.custom-options div {
+    margin: 10px 0;
+}
+
+.custom-options label {
+    color: #fff;
+    margin-right: 10px;
+}
+
+.custom-options input {
+    margin-left: 10px;
+}
+
 .controls {
     margin-top: 20px;
     font-size: 1em;
